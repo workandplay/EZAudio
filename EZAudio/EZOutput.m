@@ -342,7 +342,7 @@ OSStatus EZOutputGraphRenderCallback(void                       *inRefCon,
     //
     // Add render callback
     //
-    [EZAudioUtilities checkResult:AudioUnitAddRenderNotify(self.info->mixerNodeInfo.audioUnit,
+    [EZAudioUtilities checkResult:AudioUnitAddRenderNotify(self.info->converterNodeInfo.audioUnit,
                                                            EZOutputGraphRenderCallback,
                                                            (__bridge void *)(self))
                         operation:"Failed to add render callback"];
